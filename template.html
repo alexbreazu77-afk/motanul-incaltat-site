@@ -900,10 +900,22 @@ footer a:hover{color:#fff}
 
   // ---------- contact form ----------
   var f=document.getElementById('visit');
+  // forms: kept by Netlify (backup) and emailed through Web3Forms when a key is set in the admin panel
+  var W3F_KEY='{{setari.cheie_formulare}}';
   function send(form,ok,fail){
-    var fd=new FormData(form),body=[];fd.forEach(function(v,k){body.push(encodeURIComponent(k)+'='+encodeURIComponent(v))});
+    var fd=new FormData(form),body=[],data={};fd.forEach(function(v,k){body.push(encodeURIComponent(k)+'='+encodeURIComponent(v));if(k!=='form-name'&&k!=='adresa_web'&&v!=='')data[k]=v});
     if(!window.fetch){form.submit();return}
-    fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:body.join('&')}).then(function(r){r.ok?ok():fail()}).catch(fail);
+    var nf=fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:body.join('&')}).then(function(r){return r.ok}).catch(function(){return false});
+    if(!W3F_KEY){nf.then(function(o){o?ok():fail()});return}
+    var anon=form.id==='szf';
+    data.access_key=W3F_KEY;
+    data.subject=anon?'Sesizare de pe site: '+(data.tip||'')+' – '+(data.subiect||''):'Mesaj de pe site: '+(data.scop||'contact');
+    data.from_name=anon?'Formular anonim – site Grădinița Motanul Încălțat':'Site Grădinița Motanul Încălțat';
+    if(!anon&&data.email)data.replyto=data.email;
+    data.botcheck='';
+    fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
+      .then(function(r){return r.json()}).then(function(j){j&&j.success?ok():nf.then(function(o){o?ok():fail()})})
+      .catch(function(){nf.then(function(o){o?ok():fail()})});
   }
   f.addEventListener('submit',function(e){
     e.preventDefault();
