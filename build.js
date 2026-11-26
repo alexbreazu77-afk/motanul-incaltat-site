@@ -10,6 +10,7 @@ const read = (f) => JSON.parse(fs.readFileSync(path.join(ROOT, 'content', f + '.
 const data = {
   setari: read('setari'), acasa: read('acasa'), despre: read('despre'), tarife: read('tarife'),
   galerie: read('galerie'), documente: read('documente'), informatii: read('informatii'),
+  confidentialitate: read('confidentialitate'),
   an: String(new Date().getFullYear()),
 };
 
@@ -59,6 +60,18 @@ const blocks = {
   },
   documente: () => list(D.documente.documente).map((d) =>
     `\n      <a class="doc" data-c="${esc(d.categorie)}" href="${esc(d.fisier)}" target="_blank" rel="noopener"><i class="ico"><svg><use href="#i-file"/></svg></i><span><b>${esc(d.titlu)}</b><small>${esc(d.categorie)} · ${esc(fileType(d.fisier))}</small></span><em><svg><use href="#i-down"/></svg><span>Descarcă</span></em></a>`).join(''),
+  conf_operator: () => {
+    const c = D.confidentialitate, st = D.setari;
+    const nume = c.operator || 'Grădinița „Motanul Încălțat”';
+    return `<p>Datele sunt prelucrate de <b>${esc(nume)}</b>${c.cui ? `, CUI ${esc(c.cui)}` : ''}, cu sediul în ${esc(st.adresa)}. ` +
+      `Ne puteți contacta la <a href="mailto:${esc(st.email)}">${esc(st.email)}</a> sau la telefon <a href="${esc(tel(st.telefon_secretariat))}">${esc(st.telefon_secretariat)}</a>.</p>`;
+  },
+  conf_sectiuni: () => list(D.confidentialitate.sectiuni).map((s) => {
+    let body = `\n    <h2>${esc(s.titlu)}</h2>`;
+    if (s.text) body += '\n    ' + paras(s.text);
+    if (list(s.lista).length) body += '\n    <ul>' + list(s.lista).map((x) => `<li>${esc(x)}</li>`).join('') + '</ul>';
+    return body;
+  }).join(''),
   info_nav: () => list(D.informatii.sectiuni).map((s) =>
     `<button type="button" class="chip" data-go="i-${slug(s.titlu)}">${esc(s.scurt || s.titlu)}</button>`).join(''),
   info_sectiuni: () => list(D.informatii.sectiuni).map((s, i) => {

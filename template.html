@@ -195,6 +195,12 @@ header.site.scrolled .brand img{height:52px}
 .itext p{color:var(--ink);font-size:1.04rem;line-height:1.75}
 .itext p:last-child{margin-bottom:0}
 .info{scroll-margin-top:90px}
+.legal h2{margin:40px 0 14px}
+.legal h2:first-child{margin-top:0}
+.legal ul{margin:0 0 18px;padding-left:22px;color:var(--ink);font-size:1.04rem;line-height:1.75}
+.legal li{margin-bottom:6px}
+.legal .upd{color:var(--ink3);font-size:.9rem;margin-top:36px}
+.priv a{color:inherit;text-decoration:underline}
 .infonav{margin:0}
 .vquote{background:var(--g8);border-radius:var(--r2);padding:34px 36px}
 .vquote span{display:block;color:var(--m4);font-weight:700;font-size:.9rem;letter-spacing:.04em;margin-bottom:10px}
@@ -680,7 +686,7 @@ footer a:hover{color:#fff}
         </div>
         <div class="fld"><label for="f-msg">Mesaj (opțional)</label><textarea id="f-msg" name="mesaj" rows="4"></textarea></div>
         <div class="fnav"><span></span><button type="submit" class="btn btn-g">Trimiteți mesajul</button></div>
-        <p class="priv"><svg><use href="#i-lock"/></svg>Datele sunt folosite doar pentru a vă răspunde.</p>
+        <p class="priv"><svg><use href="#i-lock"/></svg>Datele sunt folosite doar pentru a vă răspunde. <a href="#confidentialitate">Detalii</a></p>
       </div>
       <div class="done" id="done" role="status"><i><svg><use href="#i-check"/></svg></i><h3>Vă mulțumim!</h3><p class="muted" id="donetxt">Mesajul a fost trimis. Vă vom contacta în cel mai scurt timp.</p></div>
     </form>
@@ -746,6 +752,21 @@ footer a:hover{color:#fff}
 <!--#info_sectiuni-->
 </div>
 
+<!-- ============ CONFIDENTIALITATE ============ -->
+<div class="view" id="v-confidentialitate" data-title="Politica de confidențialitate · Grădinița Motanul Încălțat">
+  <section class="pband"><div class="wrap">
+    <div class="crumb"><a href="#acasa">Acasă</a> / Confidențialitate</div>
+    <h1>Politica de confidențialitate</h1><p>{{confidentialitate.subtitlu}}</p>
+  </div></section>
+
+  <section class="sec"><div class="wrap itext legal">
+    <h2>Cine suntem</h2>
+    <!--#conf_operator-->
+<!--#conf_sectiuni-->
+    <p class="upd">Ultima actualizare: {{confidentialitate.actualizat}}</p>
+  </div></section>
+</div>
+
 </main>
 
 <footer>
@@ -760,10 +781,10 @@ footer a:hover{color:#fff}
         </div>
       </div>
       <div><h4>Grădinița</h4><ul><li><a href="#despre">Despre noi</a></li><li><a href="#informatii">Informații</a></li><li><a href="#galerie">Galerie</a></li></ul></div>
-      <div><h4>Pentru părinți</h4><ul><li><a href="#tarife">Tarife și înscriere</a></li><li><a href="#documente">Documente publice</a></li><li><a href="#sesizari">Sesizări anonime</a></li><li><a href="#contact">Contact</a></li></ul></div>
+      <div><h4>Pentru părinți</h4><ul><li><a href="#tarife">Tarife și înscriere</a></li><li><a href="#documente">Documente publice</a></li><li><a href="#sesizari">Sesizări anonime</a></li><li><a href="#contact">Contact</a></li><li><a href="#confidentialitate">Confidențialitate</a></li></ul></div>
       <div><h4>Contact</h4><ul><li>{{setari.adresa_scurta}}</li><li><a href="{{tel:setari.telefon_director}}">{{setari.telefon_director}}</a> (director)</li><li><a href="{{tel:setari.telefon_secretariat}}">{{setari.telefon_secretariat}}</a> (secretariat)</li><li><a href="mailto:{{setari.email}}">{{setari.email}}</a></li></ul></div>
     </div>
-    <div class="fbot"><span>© {{an}} Grădinița Motanul Încălțat. Toate drepturile rezervate.</span><span>Propunere de design realizată de Alexandru Breazu · 0764 664 624</span></div>
+    <div class="fbot"><span>© {{an}} Grădinița Motanul Încălțat. Toate drepturile rezervate.</span><span><a href="#confidentialitate">Politica de confidențialitate</a> · Site realizat de Alexandru Breazu</span></div>
   </div>
 </footer>
 
@@ -783,7 +804,7 @@ footer a:hover{color:#fff}
 <script>
 (function(){
   var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var views=['acasa','despre','tarife','galerie','documente','contact','informatii'];
+  var views=['acasa','despre','tarife','galerie','documente','contact','informatii','confidentialitate'];
   var links=[].slice.call(document.querySelectorAll('#menu a')),menu=document.getElementById('menu');
 
   // ---------- motion: entrance animations of different kinds ----------
