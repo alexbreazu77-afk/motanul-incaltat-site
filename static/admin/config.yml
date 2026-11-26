@@ -164,6 +164,23 @@ collections:
               - { label: "Citat evidențiat — text (opțional)", name: citat, widget: text, required: false }
               - { label: "Listă numerotată (opțional)", name: lista, widget: list, required: false, field: { label: "Punct", name: punct, widget: text } }
 
+      - label: "Politica de confidențialitate"
+        name: confidentialitate
+        file: content/confidentialitate.json
+        fields:
+          - { label: "Text sub titlul paginii", name: subtitlu, widget: string }
+          - { label: "Denumirea oficială a grădiniței (firma)", name: operator, widget: string, required: false, hint: "Ex.: denumirea din certificatul de înregistrare. Dacă e gol, apare numele grădiniței." }
+          - { label: "CUI", name: cui, widget: string, required: false }
+          - { label: "Data ultimei actualizări", name: actualizat, widget: string }
+          - label: "Secțiuni"
+            name: sectiuni
+            widget: list
+            summary: "{{fields.titlu}}"
+            fields:
+              - { label: "Titlu", name: titlu, widget: string }
+              - { label: "Text (paragrafele se despart cu un rând liber)", name: text, widget: text, required: false }
+              - { label: "Listă cu buline (opțional)", name: lista, widget: list, required: false, field: { label: "Punct", name: punct, widget: text } }
+
       - label: "Date de contact și program"
         name: setari
         file: content/setari.json
