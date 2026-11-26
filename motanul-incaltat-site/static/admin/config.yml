@@ -1,0 +1,182 @@
+# Panoul de administrare (Decap CMS). Fiecare salvare actualizează site-ul în ~1 minut.
+backend:
+  name: git-gateway
+  branch: main
+  commit_messages:
+    update: "Actualizare: {{slug}}"
+    uploadMedia: "Fișier încărcat: {{path}}"
+    deleteMedia: "Fișier șters: {{path}}"
+
+locale: ro
+publish_mode: simple
+media_folder: static/uploads
+public_folder: /uploads
+site_url: /
+logo_url: /assets/logo.png
+
+collections:
+  - name: continut
+    label: "Conținutul site-ului"
+    description: "Alegeți pagina pe care vreți să o modificați. După „Publish” (Publică), site-ul se actualizează în aproximativ un minut."
+    editor: { preview: false }
+    files:
+      - label: "Tarife"
+        name: tarife
+        file: content/tarife.json
+        fields:
+          - { label: "Text sub titlul paginii", name: subtitlu, widget: string }
+          - { label: "Eticheta de pe caseta cu prețul", name: eticheta, widget: string }
+          - { label: "Tarif lunar (doar cifra, ex. 2.100)", name: suma, widget: string }
+          - { label: "Unitate (ex. lei / lună)", name: unitate, widget: string }
+          - { label: "Program afișat sub preț", name: program, widget: string }
+          - { label: "Ce include tariful", name: include, widget: list, field: { label: "Element", name: element, widget: string } }
+          - { label: "Text introductiv opționale", name: optionale_intro, widget: string }
+          - label: "Activități opționale"
+            name: optionale
+            widget: list
+            fields:
+              - { label: "Nume", name: nume, widget: string }
+              - { label: "Detalii (opțional)", name: detalii, widget: string, required: false }
+          - { label: "Notă sub opționale", name: optionale_nota, widget: string }
+          - label: "Pașii pentru înscriere"
+            name: pasi
+            widget: list
+            fields:
+              - { label: "Titlu", name: titlu, widget: string }
+              - { label: "Text", name: text, widget: text }
+          - label: "Întrebări frecvente"
+            name: intrebari
+            widget: list
+            fields:
+              - { label: "Întrebare", name: intrebare, widget: string }
+              - { label: "Răspuns", name: raspuns, widget: text }
+
+      - label: "Documente publice"
+        name: documente
+        file: content/documente.json
+        fields:
+          - { label: "Text sub titlul paginii", name: subtitlu, widget: string }
+          - label: "Documente"
+            name: documente
+            widget: list
+            summary: "{{fields.titlu}}"
+            fields:
+              - { label: "Titlul documentului", name: titlu, widget: string }
+              - label: "Categorie"
+                name: categorie
+                widget: select
+                options: ["Autorizații", "Regulamente", "Ofertă educațională", "Strategie", "Rapoarte", "Proiecte", "Altele"]
+              - { label: "Fișier (PDF)", name: fisier, widget: file }
+
+      - label: "Galerie foto"
+        name: galerie
+        file: content/galerie.json
+        fields:
+          - { label: "Text sub titlul paginii", name: subtitlu, widget: string }
+          - label: "Fotografii"
+            name: poze
+            widget: list
+            summary: "{{fields.titlu}}"
+            fields:
+              - { label: "Fotografie", name: imagine, widget: image }
+              - { label: "Titlu scurt", name: titlu, widget: string }
+              - label: "Categorie"
+                name: categorie
+                widget: select
+                options: [{ label: "Săli", value: sali }, { label: "Curte", value: curte }, { label: "Activități", value: activitati }]
+
+      - label: "Prima pagină"
+        name: acasa
+        file: content/acasa.json
+        fields:
+          - { label: "Eticheta din colțul pozei", name: eticheta, widget: string }
+          - { label: "Titlu mare", name: titlu, widget: string }
+          - { label: "Descriere sub titlu", name: descriere, widget: text }
+          - label: "Pozele care se schimbă sus"
+            name: slider
+            widget: list
+            summary: "{{fields.descriere}}"
+            fields:
+              - { label: "Fotografie", name: imagine, widget: image }
+              - { label: "Descrierea pozei (pentru cititoare de ecran)", name: descriere, widget: string }
+          - label: "Cele 6 informații scurte"
+            name: informatii
+            widget: list
+            summary: "{{fields.titlu}}"
+            fields:
+              - { label: "Iconiță", name: iconita, widget: select, options: &icons [{ label: "Copii / grupe", value: users }, { label: "Glob / limbi străine", value: globe }, { label: "Ceas / program", value: clock }, { label: "Masă / mâncare", value: food }, { label: "Copac / curte", value: tree }, { label: "Lună / somn", value: moon }, { label: "Scut / acreditare", value: shield }, { label: "Strângere de mână / partener", value: handshake }, { label: "Creier / gândire", value: brain }, { label: "Grafic / dezvoltare", value: chart }, { label: "Soare", value: sun }, { label: "Document", value: file }, { label: "Inimă", value: heart }, { label: "Carte", value: book }, { label: "Paletă / artă", value: palette }, { label: "Casă", value: home }, { label: "Munte / excursie", value: mountain }, { label: "Bifă", value: check }] }
+              - { label: "Titlu", name: titlu, widget: string }
+              - { label: "Text", name: text, widget: string }
+          - { label: "Card Tarife — text", name: card_tarife, widget: string }
+          - { label: "Card Galerie — text", name: card_galerie, widget: string }
+          - { label: "Card Documente — text", name: card_documente, widget: string }
+          - { label: "Caseta verde — titlu", name: inscrieri_titlu, widget: string }
+          - { label: "Caseta verde — text", name: inscrieri_text, widget: text }
+
+      - label: "Despre noi"
+        name: despre
+        file: content/despre.json
+        fields:
+          - { label: "Text sub titlul paginii", name: subtitlu, widget: string }
+          - { label: "Prima secțiune — eticheta mică", name: fundament_eticheta, widget: string }
+          - { label: "Prima secțiune — titlu", name: fundament_titlu, widget: string }
+          - { label: "Prima secțiune — text (paragrafele se despart cu un rând liber)", name: fundament_text, widget: text }
+          - { label: "Prima secțiune — fotografie", name: fundament_imagine, widget: image }
+          - { label: "O zi la grădiniță — text introductiv", name: zi_text, widget: text }
+          - label: "O zi la grădiniță — programul"
+            name: zi
+            widget: list
+            summary: "{{fields.ora}} — {{fields.activitate}}"
+            fields:
+              - { label: "Ora / momentul zilei", name: ora, widget: string }
+              - { label: "Activitate", name: activitate, widget: string }
+          - label: "Spațiile grădiniței"
+            name: spatii
+            widget: list
+            summary: "{{fields.titlu}}"
+            fields:
+              - { label: "Fotografie", name: imagine, widget: image }
+              - { label: "Titlu", name: titlu, widget: string }
+              - { label: "Text", name: text, widget: string }
+          - label: "Acreditare și parteneri"
+            name: parteneri
+            widget: list
+            summary: "{{fields.titlu}}"
+            fields:
+              - { label: "Iconiță", name: iconita, widget: select, options: *icons }
+              - { label: "Titlu", name: titlu, widget: string }
+              - { label: "Text", name: text, widget: string }
+
+      - label: "Informații"
+        name: informatii
+        file: content/informatii.json
+        fields:
+          - { label: "Text sub titlul paginii", name: subtitlu, widget: string }
+          - label: "Secțiuni"
+            name: sectiuni
+            widget: list
+            summary: "{{fields.titlu}}"
+            fields:
+              - { label: "Titlu", name: titlu, widget: string }
+              - { label: "Nume scurt pentru butonul de sus", name: scurt, widget: string }
+              - { label: "Text (paragrafele se despart cu un rând liber)", name: text, widget: text, required: false }
+              - { label: "Citat evidențiat — eticheta (opțional)", name: citat_eticheta, widget: string, required: false }
+              - { label: "Citat evidențiat — text (opțional)", name: citat, widget: text, required: false }
+              - { label: "Listă numerotată (opțional)", name: lista, widget: list, required: false, field: { label: "Punct", name: punct, widget: text } }
+
+      - label: "Date de contact și program"
+        name: setari
+        file: content/setari.json
+        fields:
+          - { label: "Telefon director", name: telefon_director, widget: string }
+          - { label: "Telefon secretariat", name: telefon_secretariat, widget: string }
+          - { label: "Telefon / fax", name: telefon_fax, widget: string }
+          - { label: "Email", name: email, widget: string }
+          - { label: "Adresa completă", name: adresa, widget: string }
+          - { label: "Adresa scurtă (bara de sus și subsol)", name: adresa_scurta, widget: string }
+          - { label: "Program (pagina Contact)", name: program, widget: string }
+          - { label: "Primirea copiilor (pagina Contact)", name: primire, widget: string }
+          - { label: "Program afișat în bara de sus", name: program_scurt, widget: string }
+          - { label: "Link Facebook", name: facebook, widget: string }
+          - { label: "Link hartă (Google Maps)", name: harta, widget: string }
+          - { label: "Text din subsol", name: subsol, widget: string }

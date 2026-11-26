@@ -1,0 +1,73 @@
+{
+  "subtitlu": "Grădiniță particulară acreditată conform OMCTS 4576/2010, în Pitești.",
+  "fundament_eticheta": "Fundamentul educațional",
+  "fundament_titlu": "Un model de educație personalizată",
+  "fundament_text": "Proiectul grădiniței pornește de la aptitudinile și potențialul fiecărui copil și ține cont de mediul în care acesta crește.\n\nActivitățile sunt gândite în jurul nevoilor copilului: sănătate, alimentație, educație și stimulare psihosocială potrivită vârstei.",
+  "fundament_imagine": "/uploads/clasa-activitate.jpg",
+  "zi_text": "Programul este de luni până vineri, între 8:00 și 18:00, iar copiii sunt primiți de la ora 7:30. Ziua îmbină joaca, învățarea și odihna, cu ore fixe pentru masă și somn; durata activităților diferă în funcție de vârsta grupei.",
+  "zi": [
+    {
+      "ora": "de la 7:30",
+      "activitate": "Primirea copiilor și joc liber"
+    },
+    {
+      "ora": "dimineața",
+      "activitate": "Micul dejun"
+    },
+    {
+      "ora": "de la 8:00",
+      "activitate": "Activități educaționale pe grupe"
+    },
+    {
+      "ora": "la prânz",
+      "activitate": "Joacă în curte, apoi masa de prânz"
+    },
+    {
+      "ora": "după-amiaza",
+      "activitate": "Somnul de prânz, în dormitor"
+    },
+    {
+      "ora": "până la 18:00",
+      "activitate": "Gustarea, activități opționale și plecarea acasă"
+    }
+  ],
+  "spatii": [
+    {
+      "imagine": "/uploads/sala-grupa.jpg",
+      "titlu": "Săli de grupă",
+      "text": "Luminoase, cu tablă interactivă și colțuri tematice."
+    },
+    {
+      "imagine": "/uploads/dormitor.jpg",
+      "titlu": "Dormitor",
+      "text": "Un spațiu liniștit pentru somnul de prânz."
+    },
+    {
+      "imagine": "/uploads/loc-joaca.jpg",
+      "titlu": "Curte",
+      "text": "Locuri de joacă sigure, în curtea proprie."
+    }
+  ],
+  "parteneri": [
+    {
+      "iconita": "shield",
+      "titlu": "Grădiniță acreditată",
+      "text": "Conform OMCTS 4576/2010."
+    },
+    {
+      "iconita": "handshake",
+      "titlu": "Inspectoratul Școlar Județean Argeș",
+      "text": "Partener al grădiniței."
+    },
+    {
+      "iconita": "brain",
+      "titlu": "Mind Lab",
+      "text": "Program pentru gândire și inteligență emoțională."
+    },
+    {
+      "iconita": "globe",
+      "titlu": "eTwinning",
+      "text": "Proiect de colaborare internațională „Merry Christmas Card Journey”."
+    }
+  ]
+}

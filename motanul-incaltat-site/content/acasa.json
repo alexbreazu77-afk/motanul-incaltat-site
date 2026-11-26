@@ -1,0 +1,64 @@
+{
+  "eticheta": "Grădiniță acreditată · OMCTS 4576/2010",
+  "titlu": "Grădinița Motanul Încălțat",
+  "descriere": "Grădiniță particulară pentru copii între 3 și 6 ani, pe Str. Făgetului 33 din Pitești, în apropierea Pădurii Trivale.",
+  "slider": [
+    {
+      "imagine": "/uploads/curte-tobogan.jpg",
+      "descriere": "Curtea grădiniței, cu tobogan și locuri de joacă"
+    },
+    {
+      "imagine": "/uploads/clasa-copii.jpg",
+      "descriere": "Copii desenând la măsuță, împreună cu educatoarea"
+    },
+    {
+      "imagine": "/uploads/motan-perete.jpg",
+      "descriere": "Pictura cu Motanul Încălțat de pe peretele din curte"
+    },
+    {
+      "imagine": "/uploads/loc-joaca.jpg",
+      "descriere": "Locul de joacă din curtea grădiniței"
+    },
+    {
+      "imagine": "/uploads/sala-grupa.jpg",
+      "descriere": "Sala de grupă"
+    }
+  ],
+  "informatii": [
+    {
+      "iconita": "users",
+      "titlu": "Grupe mici",
+      "text": "Maximum 16 copii într-o grupă"
+    },
+    {
+      "iconita": "globe",
+      "titlu": "Limba engleză",
+      "text": "Inclusă în programul zilnic"
+    },
+    {
+      "iconita": "clock",
+      "titlu": "Program prelungit",
+      "text": "8:00–18:00, primirea copiilor de la 7:30"
+    },
+    {
+      "iconita": "food",
+      "titlu": "Trei mese pe zi",
+      "text": "Meniu elaborat de nutriționist"
+    },
+    {
+      "iconita": "tree",
+      "titlu": "Curte proprie",
+      "text": "Cu locuri de joacă"
+    },
+    {
+      "iconita": "moon",
+      "titlu": "Dormitor",
+      "text": "Pentru somnul de prânz"
+    }
+  ],
+  "card_tarife": "2.100 lei pe lună, cu masa și activitățile din program incluse.",
+  "card_galerie": "Sălile de grupă, dormitorul și curtea grădiniței.",
+  "card_documente": "Autorizații, regulamente și rapoarte oficiale.",
+  "inscrieri_titlu": "Înscrieri și vizite",
+  "inscrieri_text": "Pentru informații despre locurile disponibile sau pentru a programa o vizită, ne puteți contacta telefonic sau prin formularul de pe site."
+}

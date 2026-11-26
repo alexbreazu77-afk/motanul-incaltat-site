@@ -1,0 +1,60 @@
+{
+  "subtitlu": "Imagini din sălile de grupă, din dormitor și din curtea grădiniței.",
+  "poze": [
+    {
+      "imagine": "/uploads/curte-tobogan.jpg",
+      "titlu": "Curtea grădiniței",
+      "categorie": "curte"
+    },
+    {
+      "imagine": "/uploads/clasa-copii.jpg",
+      "titlu": "Activitate la grupă",
+      "categorie": "sali"
+    },
+    {
+      "imagine": "/uploads/sala-grupa.jpg",
+      "titlu": "Sala de grupă",
+      "categorie": "sali"
+    },
+    {
+      "imagine": "/uploads/loc-joaca.jpg",
+      "titlu": "Locul de joacă",
+      "categorie": "curte"
+    },
+    {
+      "imagine": "/uploads/dormitor.jpg",
+      "titlu": "Dormitorul",
+      "categorie": "sali"
+    },
+    {
+      "imagine": "/uploads/cladire.jpg",
+      "titlu": "Clădirea grădiniței",
+      "categorie": "curte"
+    },
+    {
+      "imagine": "/uploads/clasa-activitate.jpg",
+      "titlu": "Activitate cu educatoarea",
+      "categorie": "sali"
+    },
+    {
+      "imagine": "/uploads/motan-perete.jpg",
+      "titlu": "Motanul din curte",
+      "categorie": "curte"
+    },
+    {
+      "imagine": "/uploads/micii-cofetari.jpg",
+      "titlu": "Micii bucătari",
+      "categorie": "activitati"
+    },
+    {
+      "imagine": "/uploads/munte.jpg",
+      "titlu": "Excursie la munte",
+      "categorie": "activitati"
+    },
+    {
+      "imagine": "/uploads/mos-nicolae.jpg",
+      "titlu": "Povești de iarnă",
+      "categorie": "activitati"
+    }
+  ]
+}

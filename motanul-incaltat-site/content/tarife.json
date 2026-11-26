@@ -1,0 +1,71 @@
+{
+  "subtitlu": "Tariful lunar include programul educațional complet și masa.",
+  "eticheta": "Program prelungit",
+  "suma": "2.100",
+  "unitate": "lei / lună",
+  "program": "Luni–vineri, 8:00–18:00 · primirea copiilor de la 7:30",
+  "include": [
+    "Limba engleză",
+    "Desen, pictură și arte plastice",
+    "Inițiere în calculator și internet",
+    "Consiliere psihologică pentru părinți și copii",
+    "Program educațional special, cu programă extinsă",
+    "Trei mese pe zi: mic dejun, prânz și gustare"
+  ],
+  "optionale_intro": "Pentru copiii care doresc activități suplimentare:",
+  "optionale": [
+    {
+      "nume": "Mind Lab",
+      "detalii": "gândire și inteligență emoțională"
+    },
+    {
+      "nume": "Dezvoltare personală",
+      "detalii": ""
+    }
+  ],
+  "optionale_nota": "Tarifele activităților opționale se comunică la cerere.",
+  "pasi": [
+    {
+      "titlu": "Contactați-ne",
+      "text": "Telefonic sau prin formularul de pe site. Vă informăm despre locurile disponibile."
+    },
+    {
+      "titlu": "Vizitați grădinița",
+      "text": "Puteți vedea sălile, dormitorul și curtea și puteți cunoaște educatoarele."
+    },
+    {
+      "titlu": "Completați dosarul",
+      "text": "Vă comunicăm actele necesare și stabilim împreună data începerii."
+    }
+  ],
+  "intrebari": [
+    {
+      "intrebare": "Ce vârstă trebuie să aibă copilul?",
+      "raspuns": "Primim copii între 3 și 6 ani, în grupele mică, mijlocie și mare. Copiii de 2–3 ani pot fi primiți în grupa mică, în limita locurilor disponibile."
+    },
+    {
+      "intrebare": "Care este programul grădiniței?",
+      "raspuns": "Programul este de luni până vineri, între 8:00 și 18:00. Copiii pot fi aduși de la ora 7:30."
+    },
+    {
+      "intrebare": "Ce include tariful de 2.100 lei?",
+      "raspuns": "Limba engleză, desen, pictură și arte plastice, inițiere în calculator și internet, consiliere psihologică pentru părinți și copii, programul educațional cu programă extinsă și trei mese pe zi."
+    },
+    {
+      "intrebare": "Câți copii sunt într-o grupă?",
+      "raspuns": "Cel mult 16 copii în fiecare grupă."
+    },
+    {
+      "intrebare": "Cum sunt informați părinții despre progresul copilului?",
+      "raspuns": "Prin fișe de progres, un portofoliu cu lucrările copilului și discuții periodice cu educatoarele."
+    },
+    {
+      "intrebare": "Grădinița este acreditată?",
+      "raspuns": "Da, grădinița este acreditată conform OMCTS 4576/2010."
+    },
+    {
+      "intrebare": "Putem vizita grădinița înainte de înscriere?",
+      "raspuns": "Da. Vă rugăm să ne contactați telefonic sau prin formularul de contact pentru a stabili o oră potrivită."
+    }
+  ]
+}
