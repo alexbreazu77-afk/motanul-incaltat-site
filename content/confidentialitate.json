@@ -1,0 +1,54 @@
+{
+  "subtitlu": "Cum folosim și cum protejăm datele pe care ni le transmiteți prin acest site.",
+  "operator": "",
+  "cui": "",
+  "actualizat": "26 noiembrie 2026",
+  "sectiuni": [
+    {
+      "titlu": "Ce date colectăm",
+      "text": "Colectăm doar datele pe care ni le trimiteți dumneavoastră prin formularele de pe site.",
+      "lista": [
+        "Formularul de contact și programare vizită: nume și prenume, telefon, email (opțional), vârsta copilului și mesajul dumneavoastră.",
+        "Formularul de sesizări: este anonim. Nume și date de contact primim doar dacă alegeți să le lăsați pentru a primi un răspuns.",
+        "Site-ul nu folosește cookie-uri de urmărire sau de publicitate și nu folosește servicii de statistică a vizitatorilor."
+      ]
+    },
+    {
+      "titlu": "De ce folosim datele",
+      "text": "Folosim datele doar pentru a vă răspunde: pentru a programa o vizită, pentru a vă oferi informații despre înscriere sau pentru a analiza și a răspunde unei sesizări.\n\nTemeiul legal este cererea dumneavoastră de a fi contactat înaintea unei eventuale înscrieri (art. 6 alin. (1) lit. b din Regulamentul (UE) 2016/679 – GDPR) și interesul nostru legitim de a răspunde sesizărilor și de a îmbunătăți activitatea grădiniței (art. 6 alin. (1) lit. f din GDPR).\n\nNu folosim datele în scop de marketing, nu le vindem și nu le transmitem altor persoane în afara celor de mai jos.",
+      "lista": []
+    },
+    {
+      "titlu": "Cine are acces la date",
+      "text": "Mesajele sunt citite doar de conducerea și de secretariatul grădiniței.\n\nPentru funcționarea site-ului folosim furnizori tehnici care primesc datele doar ca să le transmită către noi: Netlify (găzduirea site-ului și primirea formularelor) și Web3Forms (trimiterea mesajelor pe email). Unii dintre acești furnizori pot prelucra date în afara Spațiului Economic European, cu garanțiile prevăzute de GDPR.",
+      "lista": []
+    },
+    {
+      "titlu": "Cât timp păstrăm datele",
+      "text": "Păstrăm mesajele cât este necesar pentru a vă răspunde și cel mult 12 luni, apoi le ștergem. Dacă vă înscrieți copilul la grădiniță, datele din dosarul de înscriere se păstrează conform obligațiilor legale ale unității de învățământ.",
+      "lista": []
+    },
+    {
+      "titlu": "Fotografiile de pe site",
+      "text": "Fotografiile din activitățile grădiniței sunt publicate doar cu acordul părinților. Dacă doriți ca o fotografie să fie retrasă de pe site, scrieți-ne și o eliminăm în cel mai scurt timp.",
+      "lista": []
+    },
+    {
+      "titlu": "Drepturile dumneavoastră",
+      "text": "În legătură cu datele dumneavoastră aveți următoarele drepturi:",
+      "lista": [
+        "dreptul de a afla ce date avem despre dumneavoastră și de a primi o copie a lor;",
+        "dreptul de a cere corectarea datelor greșite;",
+        "dreptul de a cere ștergerea datelor;",
+        "dreptul de a cere restricționarea folosirii lor și dreptul de a vă opune;",
+        "dreptul de a primi datele într-un format ușor de transmis (portabilitate);",
+        "dreptul de a depune o plângere la Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP), www.dataprotection.ro."
+      ]
+    },
+    {
+      "titlu": "Cum ne contactați",
+      "text": "Pentru orice întrebare sau cerere legată de datele dumneavoastră, ne puteți scrie la adresa de email sau ne puteți suna la numerele afișate pe pagina Contact. Răspundem în cel mult o lună.",
+      "lista": []
+    }
+  ]
+}
